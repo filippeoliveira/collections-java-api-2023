@@ -8,12 +8,13 @@ public class OrdenacaoPessoa {
 
     private List<Pessoa> pessoaList;
 
-    public OrdenacaoPessoa(List<Pessoa> pessoaList) {
+    public OrdenacaoPessoa() {
         this.pessoaList = pessoaList;
     }
 
 
-    public void public void adcionarPessoa(String nome, int idade, double altura){
+
+    public void adicionarPessoa(String nome, int idade, double altura){
         pessoaList.add(new Pessoa(nome, idade, altura));
 
     }
@@ -28,5 +29,18 @@ public List<Pessoa> ordenarPorAltura(){
     return pessoaPorAltura;
 
     }
+
+    public static void main(String[] args) {
+        OrdenacaoPessoa ordenacaoPessoa = new OrdenacaoPessoa();
+        ordenacaoPessoa.adicionarPessoa("Nome 1", 20, 1.56);
+        ordenacaoPessoa.adicionarPessoa("Nome 2", 30, 1.80);
+        ordenacaoPessoa.adicionarPessoa("nome 3", 15, 1.70);
+        ordenacaoPessoa.adicionarPessoa("Nome 4", 17, 1.56);
+
+        System.out.println(ordenacaoPessoa.ordenarPorIdade());
+        System.out.println(ordenacaoPessoa.ordenarPorAltura());
+
+    }
+
 
 }
